@@ -121,6 +121,26 @@ insert into PRODUCE (Product_name, Price, Quantity) values("Grapes", 2.99, 200)
 insert into PRODUCE (Product_name, Price, Quantity) values("Corn", .99, 200)
 insert into PRODUCE (Product_name, Price, Quantity) values("Pears", .99, 200)
 
+-- WINE INSERTS
+
+insert into WINE (Product_name, Price, Quantity) values("Cinder Cabernet Sauvignon '10", 14.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Split Rail Mourvdre '10", 15.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Koening Syrah '09", 12.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Vale Merlot '09", 12.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Sawtooth Cabernet Sauvignon '09", 12.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Torii Mor Pinot Noir '09", 12.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Gran Malbec '13", 16.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Hermitage Blanc", 12.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Condrieu", 13.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Chassagne Montrachet Blanc", 13.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Pauillac", 15.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("La Grande Rue", 19.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Chambertin", 18.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("Chambolle Musigny", 20.99, 100)
+insert into WINE (Product_name, Price, Quantity) values("La Tache", 17.99, 100)
+
+
+
 
 
 
