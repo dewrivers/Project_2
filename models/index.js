@@ -1,5 +1,7 @@
-
+var fs = require("fs");
+var path = require("path");
 const Sequelize = require("sequelize");
+var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
@@ -10,6 +12,13 @@ if (config.use_env_variable) {
     var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+sequelize.authenticate().then(() => {
+    console.log('Connection established successfully.');
+}).catch(err => {
+    console.error('Unable to connect to the database:', err);
+}).finally(() => {
+    sequelize.close();
+});
 
 
 db.sequelize = sequelize;
