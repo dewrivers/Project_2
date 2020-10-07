@@ -16,10 +16,12 @@ module.exports = function(sequelize, DataTypes) {
       },
       Quantity: {
         type: DataTypes.INTEGER,
-        defaultValue: "Personal"
+        defaultValue: 200
       }
     });
     return Bakery;
   };
 
-  console.log(Bakery)
+
+
+  
