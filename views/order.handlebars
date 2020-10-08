@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Le Marché Français</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Yesteryear&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+    <body>
+    {{!-- NAV BAR --}}
+    <nav class="navbar navbar-expand-lg ">
+        <h1 class="navbar-brand">Le Marché Français</h1>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<div>
+    <p>First name</p>
+    <p>Last name</p>
+    <p>Phone Number </p>
+</div>
+
+<div>
+
+
+    <button class="category" name='bakery'>Bakery</button>
+    <button class='category' name='Cheese'>Cheese</button>
+    <button class='category' name='Dessert'>Dessert</button>
+    <button class='category' name='Fish'>Fish</button>
+    <button class='category' name='General_Store'>General Store</button>
+    <button class='category' name='Meat'>Meat</button>
+    <button class='category' name='Produce'>Produce</button>
+    <button class='category' name='Wine'>Wine</button>
+</div>
+
+<div class='results'></div>
+
+
+<script>
+
+
+
+
+    $('.category').on('click', function() {
+        console.log('helloooo!!!', $(this).attr('name'))
+
+        $.ajax({
+            url: '/search/' + $(this).attr('name')
+        }).then(function(results){
+            console.log('resutls', results)
+            $('.results').empty()
+
+            for(var i = 0; i< results.length; i ++) {
+                console.log('we r looping!!!')
+                var div = $('<div>')
+                var title = $('<h1>')
+                    title.text( results[i].Product_name)
+                var addToCart = $('<button>')
+                    addToCart.text('add to cart')
+                    div.append(title, addToCart)
+
+                $('.results').append(div)
+            }
+        })
+    })
+
+</script>
+
+    </body>
+</html>

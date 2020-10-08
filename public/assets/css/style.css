@@ -1,0 +1,21 @@
+body {
+    background-image: url(/assets/images/frenchyside.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:60% 40%;
+}
+
+.navbar-brand {
+    font-size: x-large;
+    font-family: 'Niconne', cursive;
+
+}
+
+.message {
+    text-align: center;
+    color: blue;
+    font-size: larger;
+    font-family: 'Yesteryear', cursive;
+
+}
