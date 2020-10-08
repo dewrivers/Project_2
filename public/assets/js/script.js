@@ -1,0 +1,33 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+
+// Handling the click events for all the different Markets to display prodcuts from the DATABASE
+$('.category').on('click', function() {
+    console.log('helloooo!!!', $(this).attr('name'))
+
+    $.ajax({
+        url: '/search/' + $(this).attr('name')
+    }).then(function(results){
+        console.log('results', results)
+        $('.results').empty()
+
+        for(var i = 0; i< results.length; i ++) {
+            console.log('we r looping!!!')
+            var div = $('<div>')
+            var title = $('<h1>')
+                title.text( results[i].Product_name)
+            var addToCart = $('<button>')
+                addToCart.text('Add to Cart')
+                addToCart.addClass("addToCart")
+                div.append(title, addToCart)
+
+            $('.results').append(div)
+        }
+    })
+})
+
+// Handling the "ADD TO CART" click events to push specific item/product to the users cart.
+
+
+});
