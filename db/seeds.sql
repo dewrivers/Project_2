@@ -63,7 +63,7 @@ insert into Food (Product_name, Price, Lbs, Category) values("Halibut", 17.99, 2
 insert into Food (Product_name, Price, Lbs, Category) values("Mahi Mahi", 15.99, 200, "Fish");
 insert into Food (Product_name, Price, Lbs, Category) values("Tuna", 24.99, 200, "Fish");
 insert into Food (Product_name, Price, Lbs, Category) values("Caviar", 29.99, 200, "Fish");
-insert into Food (Product_name, Price, Lbs, Category) values("Scrout", 15.99, 200, "Fish");
+insert into Food (Product_name, Price, Lbs, Category) values("Scrod", 15.99, 200, "Fish");
 insert into Food (Product_name, Price, Lbs, Category) values("Bay Scallops", 13.99, 200, "Fish");
 
 -- GENERAL_STORE INSERTS
@@ -124,8 +124,8 @@ insert into Food (Product_name, Price, Quantity, Category) values("Pears", .99, 
 -- WINE INSERTS
 
 insert into Food (Product_name, Price, Quantity, Category) values("Cinder Cabernet Sauvignon '10", 14.99, 100, "Wine");
-insert into Food (Product_name, Price, Quantity, Category) values("Split Rail Mourvdre '10", 15.99, 100, "Wine");
-insert into Food (Product_name, Price, Quantity, Category) values("Koening Syrah '09", 12.99, 100, "Wine");
+insert into Food (Product_name, Price, Quantity, Category) values("Split Rail Cabernet Sauvignon '10", 15.99, 100, "Wine");
+insert into Food (Product_name, Price, Quantity, Category) values("Koenig Syrah '09", 12.99, 100, "Wine");
 insert into Food (Product_name, Price, Quantity, Category) values("Vale Merlot '09", 12.99, 100, "Wine");
 insert into Food (Product_name, Price, Quantity, Category) values("Sawtooth Cabernet Sauvignon '09", 12.99, 100, "Wine");
 insert into Food (Product_name, Price, Quantity, Category) values("Torii Mor Pinot Noir '09", 12.99, 100, "Wine");
