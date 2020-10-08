@@ -10,29 +10,29 @@ Id INT AUTO_INCREMENT NOT NULL,
 First_name varchar (30) NOT NULL,
 Last_name varchar(30) NOT NULL,
 Phone_number INT NOT NULL,
-Primary Key(id)
+Primary Key(id),
+Foreign Key (Cart_id) references Cart(id)
 );
 
 
 -- This will be the specific items that the customer is purchasing referenced by the Category(market) that they ordered from
 Create table Cart (
 Id INT AUTO_INCREMENT NOT NULL,
-Category_id INT NOT NULL,
 Customer_order_id INT NOT NULL,
 Name varchar(30) NOT NULL,
 Cost DEC(10, 4) NOT NULL,
 
 Primary Key(id),
-Foreign Key (Category_id) references Category(id),
-Foreign Key (Customer_order_id) references Customer_order(id)
+Foreign Key (Category_id) references Category(id)
 );
 
 -- This will be the different markets we have available for customers to choose from with the category(market name) and its specific ID to reference
 Create table Category(
 Id INT AUTO_INCREMENT NOT NULL,
 Name varchar(30) NOT NULL,
-
-Primary Key(id)
+Cart_id Int NOT NULL,
+Primary Key(id),
+Foreign Key (Cart_id) references Cart(id)
 );
 
 
