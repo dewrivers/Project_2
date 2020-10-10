@@ -14,10 +14,24 @@ module.exports = function (app) {
     });
 
     // Get route for bakery page
+    // app.get("/bakery", function (req, res) {
+    //     db.Food.findAll({
+    //         where: {
+    //             category: req.params.category
+    //         }
+    //     }).then(function (bakeryItems) {
+    //         // res.json(bakeryItems)
+    //         res.render('bakery', bakeryItems);
+    //     }).catch(function(errr) {
+    //         console.log('err', errr)
+    //     })
+    // });
+
     app.get("/bakery", function (req, res) {
-        db.Food.findAll({
+        
+            db.Food.findAll({
             where: {
-                category: req.params.category
+                category: "bakery"
             }
         }).then(function (bakeryItems) {
             // res.json(bakeryItems)
@@ -25,10 +39,15 @@ module.exports = function (app) {
         }).catch(function(errr) {
             console.log('err', errr)
         })
+        res.render('bakery')
+        // db.Bakery.findAll({}).then(function (results) {
+        //     res.json(results)
+        // });
     });
 
     // Get route for cheese page
     app.get("/cheese", function (req, res) {
+        console.log("here")
         res.render('cheese')
     });
 
