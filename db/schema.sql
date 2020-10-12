@@ -36,63 +36,16 @@ Primary Key (id)
 Alter table Category
 Add Foreign Key (Cart_id) references Cart(id);
 
+Create table Food (
+    Id INT AUTO_INCREMENT NOT NULL,
+    Product_name varchar(30) NOT NULL,
+    Price DEC(10, 4) Not Null,
+    Quantity INT NuLL,
+    Lbs INT NULL,
+    Category varchar(30) NOT NULL,
+
+    PRIMARY ID(Key);
+
+)
 
 
-
--- THESE ARE THE DIFFERENT CATEGORIES(MARKET) TABLES
-Create table MEAT (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Lbs INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table FISH (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Lbs INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table PRODUCE (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table BAKERY (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table WINE (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table CHEESE (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table DESSERT (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);
-Create table GENERAL_STORE (
-Id INT AUTO_INCREMENT NOT NULL,
-Product_name varchar(20) NOT NULL,
-Price DEC(10, 4) NOT NULL,
-Quantity INT NOT NULL,
-PRIMARY KEY(id)
-);

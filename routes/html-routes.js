@@ -19,9 +19,9 @@ module.exports = function (app) {
             where: {
                 category: req.params.category
             }
-        }).then(function (bakeryItems) {
-            // res.json(bakeryItems)
-            res.render('bakery', bakeryItems);
+        }).then(function (results) {
+            console.log(results)
+            res.render('bakery', {results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
