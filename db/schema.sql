@@ -47,7 +47,7 @@ Create table Food (
     Lbs INT NULL,
     Category varchar(30) NOT NULL,
 
-    PRIMARY ID(Key);
+    PRIMARY KEY(Id);
 
 )
 
