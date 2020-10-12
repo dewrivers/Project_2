@@ -54,3 +54,8 @@ body {
     border-radius: 15px;
     border: groove goldenrod;
 }
+
+.card:hover{
+    transition: .2s;
+    transform: scale(1.05);
+}
