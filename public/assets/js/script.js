@@ -2,31 +2,36 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
 
+
 // Handling the click events for all the different Markets to display prodcuts from the DATABASE
 $('.category').on('click', function() {
     console.log('helloooo!!!', $(this).attr('name'))
 // brings us to specific market handlebars page.
-    window.location.href='/' + $(this).attr('name');
+var category = $(this).attr('name');
+    window.location.href= '/' + category;
 
-    // $.ajax({
-    //     url: '/search/' + $(this).attr('name')
-    // }).then(function(results){
-    //     console.log('results', results)
-    //     $('.results').empty()
+
+    $.ajax({
+        url: "/" +  category + "/" +  category,
+        type: "GET",
+    }).then(function(results){
+        console.log("heyy this is working")
         
-    //     for(var i = 0; i< results.length; i ++) {
-    //         console.log('we r looping!!!')
-    //         var div = $('<div>')
-    //         var title = $('<h5 class=card-title>')
-    //         title.text( results[i].Product_name)
-    //         var addToCart = $('<button>')
-    //         addToCart.addClass("addToCart")
-    //         addToCart.text('Add to Cart')
-    //         div.append(title, addToCart)
+        // for(var i = 0; i < results.length; i ++) {
+        //     console.log('we r looping!!!')
+        //     var div = $('<div>')
+        //     var title = $('<h5>')
+        //     title.text(results[i].Product_name)
+        //     var price = $('<h6>')
+        //     price.text(results[i].Price)
+        //     var addToCart = $('<button>')
+        //     addToCart.text('Add to Cart')
+        //     var card = [title, price, addToCart];
+        //     div.append(card)
             
-    //         $('.results').append(div)
-    //     }
-    // });       
+        //     $('.results').append(div)
+        // }
+    });       
     })
 });
 
@@ -36,4 +41,4 @@ $('.category').on('click', function() {
 // $('.addToCart').on('click', function() {
 //     console.log('helloooo!!!', $(this).attr('name'))
 // })
-});
+// });
