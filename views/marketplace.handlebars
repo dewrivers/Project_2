@@ -12,23 +12,7 @@
 </head>
 
 <body>
-    {{!-- NAV BAR --}}
-    <nav class="navbar navbar-expand-lg ">
-        <h1 class="navbar-brand">Le Marché Français</h1>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
 <br>
 
  <div class="container">
@@ -42,36 +26,37 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
-                    <div class="card text-center">
+                    <div class="card text-center category" name="bakery">
                         <img class="card-img-top" src="/assets/images/marketpics/bakery.jpeg" alt="Bakery">
                         <div class="card-body">
                             <h5 class="card-title">Boulangerie</h5>
                             <p class="card-text">Well talk about how dank our bakery is.</p>
+<<<<<<< HEAD
                             <button class="category " name='Bakery'>Bakery</button>
+=======
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='cheese'>
                         <img class="card-img-top" src="/assets/images/marketpics/cheeseshop.jpg" alt="Cheese market">
                         <div class="card-body">
                             <h5 class="card-title">Fromagerie</h5>
                             <p class="card-text">Well talk about how dank our cheese is.</p>
-                            <button class='category' name='Cheese'>Cheese</button>
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='Dessert'>
                         <img class="card-img-top" src="/assets/images/marketpics/dessert.jpg" alt="Dessert market">
                         <div class="card-body">
                             <h5 class="card-title">Dessert</h5>
                             <p class="card-text">Well talk about how dank our dessert is.</p>
-                            <button class='category' name='Dessert'>Dessert</button>
+                            
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='fish'>
                         <img class="card-img-top" src="/assets/images/marketpics/fish.jpeg" alt="Fish market">
                         <div class="card-body">
                             <h5 class="card-title">Poissonerie</h5>
-                            <p class="card-text">Well talk about how dank our fish is.</p>
-                            <button class='category' name='Fish'>Fish</button>
+                            <p class="card-text" name=>Well talk about how dank our fish is.</p>
                         </div>
                     </div>
                 </div>
@@ -85,36 +70,36 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
-                    <div class="card text-center">
+                    <div class="card text-center category" name='General_Store'>
                         <img class="card-img-top" src="/assets/images/marketpics/generalstore.jpg" alt="General store">
                         <div class="card-body">
                             <h5 class="card-title">General Store</h5>
                             <p class="card-text">Got your everyday neeeeds.</p>
-                            <button class='category' name='General_Store'>General Store</button>
+                            
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='Meat'>
                         <img class="card-img-top" src="/assets/images/marketpics/butcher.jpg" alt="Butcher market">
                         <div class="card-body">
                             <h5 class="card-title">Boucherie</h5>
                             <p class="card-text">Well talk about how dank our meat is.</p>
-                            <button class='category' name='Meat'>Meat</button>
+                            
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='Produce'>
                         <img class="card-img-top" src="/assets/images/marketpics/produce.jpg" alt="Produce market">
                         <div class="card-body">
                             <h5 class="card-title">Produire</h5>
                             <p class="card-text">Well talk about how dank our produce is.</p>
-                            <button class='category' name='Produce'>Produce</button>
+                            
                         </div>
                     </div>
-                    <div class="card text-center">
+                    <div class="card text-center category" name='Wine'>
                         <img class="card-img-top" src="/assets/images/marketpics/wine.jpg" alt="Wine shop">
                         <div class="card-body">
                             <h5 class="card-title">Du Vin</h5>
                             <p class="card-text">Well talk about how dank our wine is.</p>
-                            <button class='category' name='Wine'>Wine</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -137,6 +122,10 @@
     <script type="text/javascript" src="/assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+        <script>$('.contact_us').click(function(){
+    window.location.href='/index';
+})</script>
 
 </body>
 

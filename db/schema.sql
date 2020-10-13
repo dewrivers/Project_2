@@ -5,9 +5,13 @@ USE marketplace_db;
 -- When starting an order a customer will be prompted to give their first name, last name, and phone number to start their order in which their Id will automatically be generated.
 Create table Customer_order (
 Id INT AUTO_INCREMENT NOT NULL,
-First_name varchar (30) NOT NULL,
-Last_name varchar(30) NOT NULL,
+Whole_name varchar (30) NOT NULL,
+Email varchar(30) NOT NULL,
 Phone_number INT NOT NULL,
+<<<<<<< HEAD
+=======
+PASSWORD varchar(20), NOT NULL,
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
 Primary Key(id)
 );
 Alter table customer_order
@@ -44,7 +48,12 @@ Create table Food (
     Lbs INT NULL,
     Category varchar(30) NOT NULL,
 
+<<<<<<< HEAD
     PRIMARY ID(Key);
+=======
+    
+    PRIMARY KEY(Id)
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
 
 )
 

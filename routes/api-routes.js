@@ -4,7 +4,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     // GET route for specific category/market data
-    app.get("/search/:category", function (req, res) {
+    app.get("search/:category", function (req, res) {
 
         console.log('we hit the route!!')
         db.Food.findAll({
@@ -19,21 +19,21 @@ module.exports = function (app) {
 
     });
 
-    app.get("/search/:category/:id", function (req, res) {
+    // app.get("/search/:category/:id", function (req, res) {
 
-        console.log('we hit the route!!')
-        db.Food.findAll({
-            where: {
-                category: req.params.category,
-                id: req.params.id
-            }
-        }).then(function (results) {
-            res.json(results)
-        }).catch(function(err) {
-            console.log('err', err)
-        })
+    //     console.log('we hit the route!!')
+    //     db.Food.findAll({
+    //         where: {
+    //             category: req.params.category,
+    //             id: req.params.id
+    //         }
+    //     }).then(function (results) {
+    //         res.json(results)
+    //     }).catch(function(err) {
+    //         console.log('err', err)
+    //     })
 
-    });
+    // });
 
 
 

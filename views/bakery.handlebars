@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bakery</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Yesteryear&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
+<<<<<<< HEAD
     {{!-- NAV BAR --}}
     <nav class="navbar navbar-expand-lg ">
         <h1 class="navbar-brand">Le Marché Français</h1>
@@ -35,47 +36,31 @@
       <h1> Boulangerie 🥧 </h1>
  </div>
     <div class="container-products">
+=======
+<br>
+<br>
+<h3 class="header">Boulangerie</h3>
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="..." alt="">
+                    {{#each bakery}}
+                    <div class="card bakery text-center">
+                        <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">something</h5>
-                            <p class="card-text">Well talk about how dank our bakery is.</p>
-                            
+                            <h5 class="card-title">{{this.dataValues.Product_name}}</h5>
+                            <p class="card-text">Price: ${{this.dataValues.Price}} /each</p>
+                                <a href="#" class="btn btn-info">Add to Cart</a>
                         </div>
                     </div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="..." alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">something</h5>
-                            <p class="card-text">Well talk about how dank our cheese is.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="..." alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">something</h5>
-                            <p class="card-text">Well talk about how dank our dessert is.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="..." alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">something</h5>
-                            <p class="card-text">Well talk about how dank our fish is.</p>
-                            
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
-    </div>
 <br>
 <br>
+
+
 
 <div class="results">
 
@@ -89,4 +74,7 @@
 
 </body>
 </html>
+
+
+
 
