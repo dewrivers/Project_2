@@ -36,4 +36,6 @@ $('.category').on('click', function() {
 // $('.addToCart').on('click', function() {
 //     console.log('helloooo!!!', $(this).attr('name'))
 // })
+
+
 });

@@ -1,13 +1,16 @@
-//const mysql = require('mysql');
+const mysql = require('mysql2');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-// const db = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'password77',
-//     database: 'nodejs_login'
-// });
+
+const database = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password777',
+    database: 'marketplace_db'
+});
+
+
 
 exports.login = async (req, res) => {
    try {
@@ -30,9 +33,9 @@ exports.login = async (req, res) => {
     }
 
     console.log("email: ", email);
-    let q = 'SELECT * FROM users WHERE email=?' + email;
+    let q = 'SELECT * FROM Customer_order WHERE email=?' + email;
     console.log(q);
-    db.query(`SELECT * FROM users WHERE email=?`, email, async (error, results) => {
+    database.query(`SELECT * FROM Customer_order WHERE email=?`, email, async (error, results) => {
         console.log("results: ", results);
         
        if(!results || !(await bcrypt.compare(password, results[0].password))){
@@ -40,7 +43,7 @@ exports.login = async (req, res) => {
            message: 'Email or password is incorrect'
        });
       } else {
-          const id = result[0].id;
+          const id = results[0].id;
 
           const token = jwt.sign({ id: id }, process.env.JWT_SECRET, {
               expiresIn: process.env.JWT_EXPIRES_IN
@@ -64,16 +67,15 @@ exports.login = async (req, res) => {
 
 }
 
+
 exports.register = (req, res) =>{
     console.log(req.body);
-    // const name = req.body.name;
-    // const email = req.body.email;
-    // const password = req.body.password;
-    // const phone = req.body.phone;
-    // const passwordConfirm = req.body.passwordConfirm;
-    const { name, email, password, phone, passwordConfirm } = req.body;
     
-     db.query('SELECT email FROM users WHERE email = ?', [email], async (error, results) => {
+    const { name, email, phone, password, passwordConfirm } = req.body;
+    console.log(req.body);
+    
+    database.query("SELECT email FROM Customer_order WHERE email = ?", [email], async (error, results) => {
+        
          if (error) {
              console.log(error);
          }
@@ -86,11 +88,12 @@ exports.register = (req, res) =>{
                 message: 'Password do not match'
             });
           }
+         
 
           let hashedPassword = await bcrypt.hash(password, 8);
           console.log(hashedPassword);
           //console.log('testing password');
-          db.query('INSERT INTO users SET ?', {name: name, email: email, phone: phone, password: hashedPassword }, (err, result) => {
+          database.query('INSERT INTO Customer_order SET ?', {Whole_name: name, email: email, phone_number: phone, password: hashedPassword }, (err, result) => {
                if (error) {
                 console.log(err);
                } else {

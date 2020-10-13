@@ -163,20 +163,3 @@ insert into Food (Product_name, Price, Quantity, Category) values("La Tache", 17
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

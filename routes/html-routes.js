@@ -1,4 +1,6 @@
 var db = require("../models");
+const express = require('express');
+const router = express.Router();
 
 
 module.exports = function (app) {
@@ -13,7 +15,7 @@ module.exports = function (app) {
         res.render('marketplace')
     });
 
-    // Get route for bakery page
+    
     // app.get("/bakery", function (req, res) {
     //     db.Food.findAll({
     //         where: {
@@ -27,6 +29,7 @@ module.exports = function (app) {
     //     })
     // });
 
+    // Get route for bakery page
     app.get("/bakery", function (req, res) {
         
             db.Food.findAll({
@@ -34,8 +37,9 @@ module.exports = function (app) {
                 category: "bakery"
             }
         }).then(function (bakeryItems) {
-            // res.json(bakeryItems)
-            res.render('bakery', bakeryItems);
+            res.json(bakeryItems)
+            ("bakeryItems",bakeryItems);
+            // res.render('bakery', bakeryItems);
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -48,6 +52,16 @@ module.exports = function (app) {
     // Get route for cheese page
     app.get("/cheese", function (req, res) {
         console.log("here")
+        db.Food.findAll({
+            where: {
+                category: "cheese"
+            }
+        }).then(function (cheeseItems) {
+            // res.json(bakeryItems)
+            res.render('cheese', cheeseItems);
+        }).catch(function(errr) {
+            console.log('err', errr)
+        })
         res.render('cheese')
     });
 
