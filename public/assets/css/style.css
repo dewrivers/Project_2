@@ -14,11 +14,13 @@ body {
 
 .message {
     text-align: center;
-    color: blue;
-    font-size: larger;
+    font-size: x-large;
     font-family: 'Yesteryear', cursive;
+    line-height: 40px;
 
 }
+
+
 
 .card-body {
     background-image: url(/assets/images/barnwood.jpg) !important;
@@ -30,8 +32,7 @@ body {
 
 .card-text {
     font-family: 'Yesteryear', cursive;
-    font-size: x-large;
-    color: rgb(247, 234, 208);
+    font-size: xx-large;
 }
 
 .card-title {
@@ -67,7 +68,14 @@ body {
 
 .header {
     text-align: center;
-    font-size: 150px;
+    font-size: 100px;
+    font-family: 'Yesteryear', cursive;
+    text-shadow: goldenrod;
+}
+
+.francais {
+    text-align: center;
+    font-size: 100px;
     font-family: 'Yesteryear', cursive;
     text-shadow: goldenrod;
 }

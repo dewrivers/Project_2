@@ -15,7 +15,6 @@ var category = $(this).attr('name');
         url: "/" +  category + "/" +  category,
         type: "GET",
     }).then(function(results){
-        console.log("heyy this is working")
         
         // for(var i = 0; i < results.length; i ++) {
         //     console.log('we r looping!!!')

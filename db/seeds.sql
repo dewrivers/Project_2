@@ -1,5 +1,5 @@
 -- BAKERY INSERTS
-insert into Food (Product_name, Price, Quantity, Category) values("Sourdough", 3.99, 100, "Bakery");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Sourdough", 3.99, 100, "Bakery", "sourdough.jpg");
 insert into Food (Product_name, Price, Quantity, Category) values("Baguette", 5.99, 100, "Bakery");
 insert into Food (Product_name, Price, Quantity, Category) values("Ciabatta Rolls", .99, 100, "Bakery");
 insert into Food (Product_name, Price, Quantity, Category) values("Ciabtta Loaf", 5.99, 100, "Bakery");

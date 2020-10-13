@@ -14,19 +14,22 @@
 <body>
 <br>
 <br>
-<h3 class="header">Boulangerie</h3>
+
+<h3 class="header">{{this.dataValues.Category}}</h3>
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
-                    {{#each bakery}}
+                    {{#each food}}
                     <div class="card bakery text-center">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="/assets/images/bread/{{{this.dataValues.Img_url}}}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{this.dataValues.Product_name}}</h5>
                             <p class="card-text">Price: ${{this.dataValues.Price}} /each</p>
                                 <a href="#" class="btn btn-info">Add to Cart</a>
                         </div>
                     </div>
+                    
                     {{/each}}
                 </div>
             </div>

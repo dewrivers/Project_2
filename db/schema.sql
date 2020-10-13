@@ -40,10 +40,11 @@ Add Foreign Key (Cart_id) references Cart(id);
 Create table Food (
     Id INT AUTO_INCREMENT NOT NULL,
     Product_name varchar(30) NOT NULL,
-    Price DEC(10, 4) Not Null,
+    Price DEC(10, 2) Not Null,
     Quantity INT NuLL,
     Lbs INT NULL,
     Category varchar(30) NOT NULL,
+    Img_url varchar(30) Null,
 
     
     PRIMARY KEY(Id)

@@ -13,9 +13,19 @@ module.exports = function (app) {
         res.render('marketplace')
     });
 
+        //  GET route for contact us 
+        app.get("/contact", function (req, res) {
+            res.render('contact')
+        });
+
+            //  GET route for cart page 
+    app.get("/cart", function (req, res) {
+        res.render("cart")
+    });
+
     // Get route for bakery page
     app.get("/:category", function (req, res) {
-        console.log("/bakery route is called")
+        console.log("category route is called")
 
         db.Food.findAll({
             where: {
@@ -23,11 +33,10 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            let obj ={
-                name: results[0].dataValues.Product_name,
-            }
-            console.log(obj);
-            res.render('bakery',{bakery: results});
+            Handlebars.registerHelper('escape', function(variable) {
+                return variable.replace(/(['"])/g, '\\$1');
+            });
+            res.render('bakery',{food: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -43,7 +52,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('cheese', {results});
+            res.render('cheese', {cheese: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -59,7 +68,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('dessert', {results});
+            res.render('dessert', {dessert: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -75,7 +84,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('fish', {results});
+            res.render('fish', {fish: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -91,7 +100,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('generalstore', {results});
+            res.render('generalstore', {generalStore: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -107,7 +116,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('meat', {results});
+            res.render('meat', {meat: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -125,7 +134,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('produce', {results});
+            res.render('produce', {produce: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
@@ -141,7 +150,7 @@ module.exports = function (app) {
             }
         }).then(function (results) {
             console.log(results)
-            res.render('wine', {results});
+            res.render('wine', {wine: results});
         }).catch(function(errr) {
             console.log('err', errr)
         })
