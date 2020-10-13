@@ -55,7 +55,19 @@ body {
     border: groove goldenrod;
 }
 
+.bakery {
+    min-width: 200px;
+    margin: 15px;
+}
+
 .card:hover{
     transition: .2s;
     transform: scale(1.05);
+}
+
+.header {
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Yesteryear', cursive;
+    text-shadow: goldenrod;
 }
