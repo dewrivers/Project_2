@@ -162,20 +162,3 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("La T
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
