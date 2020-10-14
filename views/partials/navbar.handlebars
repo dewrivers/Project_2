@@ -7,8 +7,17 @@
             <a class="nav-item nav-link" href="/">Home</a>
             <a class="nav-item nav-link" href="register">Register</a>
             <a class="nav-item nav-link" href="contact">Contact Us</a>
-            <a class="cart nav-item nav-link" href="cart">Cart</a>
+            <a id="cart" class="cart nav-item nav-link" href="#">Cart</a>
             
         </div>
     </div>
 </nav>
+
+<script>
+
+    $('#cart').on('click', function() {
+        var id = JSON.parse(localStorage.getItem('newuser')).results.id
+        console.log("cart: " + id)
+        window.location = "/cart/"+id
+    })
+</script>

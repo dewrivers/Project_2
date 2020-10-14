@@ -18,14 +18,13 @@
 <h3 class="header">Your Shopping Cart</h3>
 
         <div class="row">
+                    {{#each products}}
             <div class="col-lg-12">
                 <div class="card-deck">
-                    {{#each product}}
                     <div class="card text-center">
                         <div class="card-body">
-                            <h3 class="card-title">Your Cart</h3>
-                            <div class="card-text">{{this.dataValues.FoodId.}}</div>
-                            <div class="card-text">{{this.dataValues.Product_name}}</div>
+                            
+                            <div class="card-title">{{this.dataValues.Product_name}}</div>
                             <div class="card-text">Price: ${{this.dataValues.Cost}} /each</div>
                         </div>
                     </div>
@@ -45,7 +44,7 @@
         url: "/cart" + "/" + currentCustomer.results.id  ,
         type: "GET",
     }).then(function(stuffFromDb) {
-        console.log(stuffFromDb)
+        console.log("im in the .then")
         var total = 0
             
         // for(var i = 0; i < stuffFromDb.length; i ++) {

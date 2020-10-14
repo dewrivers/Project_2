@@ -46,7 +46,7 @@ module.exports = function (app) {
     });
 
     app.get("/cart/:customerId", function (req, res) {
-        console.log("category route is called")
+        console.log("customer ID route is called")
 
         db.Cart.findAll({
             where: {
@@ -55,14 +55,17 @@ module.exports = function (app) {
         }).then(function (results) {
             console.log(results)
             res.render('cart', { products: results });
+            
+
+            for(var i = 0; i < results.length; i ++) {
+                var total = 0;
+                total += 
+                console.log("CUSTOMER results", results);
+                console.log("total", total)
+            }
         }).catch(function (errr) {
             console.log('err', errr)
         })
     });
-
-
-
-
-
 
 };
