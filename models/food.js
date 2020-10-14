@@ -28,6 +28,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        Img_url: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
     });
     return Food;
 };

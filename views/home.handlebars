@@ -12,7 +12,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
     {{!-- NAV BAR --}}
     <nav class="navbar navbar-expand-lg ">
         <h1 class="navbar-brand">Le Marché Français</h1>
@@ -24,7 +23,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <li><a class="nav-link" href="/register">Register</a></li>
                 </li>
                 <li class="nav-item">
@@ -36,31 +35,56 @@
             </ul>
         </div>
     </nav>
-=======
 
->>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
+
+
+    {{!-- About Le Marche Francais --}}
+    <div class="container">
+        <div class="row">
+
 {{!-- About Le Marche Francais --}}
 
 <div class="container" mt-4>
-       <div class="card-body">
-  <div class="row">
+<div class="card-body">
+<div class="row">
+
             <div class="col-lg-12 text-center">
-<p class="message">Were going to tell you about our beautiful spot!</p>
+                <h1 class="francais text-center">Le Marché Français</h1>
+                <br>
+                <br>
+                <div class="container" mt-4>
+                    <div class="card card-text">
+                        <div class="card-body home">
+                            <div class="card-header">
+                            <p class="message">Bonjour! Amidst the changes that have affected our lives in the past year
+                                we understand that people are apprehensive of going out to the store to shop. Our
+                                mission is to bring you locally sourced, organic, good-tasting food...And now, from the
+                                comfort of your home. Register your name and email with us to shop our markets full of
+                                fresh produce, wines, cheeses, meats and everything else you need then come by and grab your order for a "no contact" pick up.</p>
+                            <p class="message">Welcome to "The French Market". Bon Appétit! </p>
+                            <br>
+                        </div>
+                            <br>
+                            <button class="startOrder btn-info addToCart text-center">Start Your Order!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  <button class="startOrder" class="btn btn-primary btn-lg">Start Your Order!</button>
-</div> 
-    </div>
 
 
 
-<script>$('.startOrder').click(function(){
-    window.location.href='/marketplace';
-})</script>
 
 
 
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>$('.startOrder').click(function () {
+            window.location.href = '/register';
+        })</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>

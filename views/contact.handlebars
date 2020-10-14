@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Yesteryear&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="container" mt-4>
+        <div class="card card-text">
+                        <div class="card-header">
+                Contact Us!
+            </div>
+            <div class="card-body">
+                
+                    <form>
+                        <div class="form-group col-md-12">
+                            <label for="exampleFormControlInput1">Name:</label>
+                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                placeholder="John Smith">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleFormControlInput1">Email Address:</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="email@somewhere.com">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleFormControlSelect1">Reason for Contact</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Feedback</option>
+                                <option>Your experience</option>
+                                <option>Complaint</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12 ">
+                            <label for="exampleFormControlTextarea1">Message:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            <br>
+                            <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <script>$('.contact_us').click(function () {
+            window.location.href = '/contact';
+        })</script>
+</body>

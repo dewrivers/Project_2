@@ -68,28 +68,44 @@ nav li a:hover {
 
 .message {
     text-align: center;
-    color: blue;
-    font-size: larger;
+    font-size: 35px;
     font-family: 'Yesteryear', cursive;
+    line-height: 40px;
+    color: rgb(255, 253, 253);
+    -webkit-text-stroke: .5px black;
 
 }
 
-.container{
-  background-image: url(/assets/images/barnwood.jpg) !important;
+.nav-item {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Yesteryear', cursive;
+    line-height: 40px;
+    color: rgb(0, 0, 0);
 }
 
-/* .card-body {
+
+
+.card-body {
     background-image: url(/assets/images/barnwood.jpg) !important;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position:60% 40%; 
 } */
 
+.home {
+    background-image: url(/assets/images/barnwood.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:60% 40%;
+}
 .card-text {
-    /* font-family: 'Yesteryear', cursive; */
-    font-size: 16px;
-    /* color: rgb(247, 234, 208); */
+    font-family: 'Yesteryear', cursive;
+    font-size: 35px;
+    color: rgb(255, 253, 253);
+    -webkit-text-stroke: .3px black;
 }
 
 .card-title {
@@ -113,7 +129,6 @@ nav li a:hover {
     border: groove goldenrod;
 }
 
-<<<<<<< HEAD
 /* STYLE  */
 
 
@@ -359,7 +374,7 @@ h1::before {
   margin-left: 1rem;
 }
 
-=======
+
 .bakery {
     min-width: 200px;
     margin: 15px;
@@ -372,8 +387,27 @@ h1::before {
 
 .header {
     text-align: center;
-    font-size: 150px;
+    font-size: 100px;
     font-family: 'Yesteryear', cursive;
     text-shadow: goldenrod;
 }
->>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
+
+.francais {
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Yesteryear', cursive;
+    text-shadow: goldenrod;
+}
+
+.addToCart {
+    background-color: rgb(245, 208, 113);
+}
+
+.marketplace {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.register {
+    color: black !important;
+}
