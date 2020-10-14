@@ -16,6 +16,11 @@ app.use(express.static("public"));
 // Handlebars business
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+// escaping quotes to dynamically add image files into path
+var hbs = exphbs.create({});
+hbs.handlebars.registerHelper('escape', function(variable) {
+  return variable.replace(/(['"])/g, '\\$1');
+});
 
 // Routes
 // =============================================================

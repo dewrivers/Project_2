@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var General_Store = sequelize.define("General_Store", {
+    var Cart = sequelize.define("Cart", {
         Product_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -7,17 +7,21 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
-        Price: {
+        Cost: {
             type: DataTypes.DECIMAL,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        Quantity: {
-            type: DataTypes.INTEGER,
-            defaultValue: 200
-        }
     });
-    return General_Store;
+    Cart.associate = function (models) {
+        // Associating Customer_order with Cart
+        // When an Customer_order is deleted, also delete any associated Cart
+        Cart.belongsTo(models.Customer);
+        Cart.belongsTo(models.Food );
+    };
+
+
+    return Cart;
 };

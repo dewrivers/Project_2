@@ -27,16 +27,6 @@ Alter table Cart
 Add Foreign Key (Customer_order_id) references Category(id);
 
 
--- This will be the different markets we have available for customers to choose from with the category(market name) and its specific ID to reference
-Create table Category(
-Id INT AUTO_INCREMENT NOT NULL,
-Name varchar (30) NOT NULL,
-Cart_id Int NOT NULL,
-Primary Key (id)
-);
-Alter table Category
-Add Foreign Key (Cart_id) references Cart(id);
-
 Create table Food (
     Id INT AUTO_INCREMENT NOT NULL,
     Product_name varchar(30) NOT NULL,

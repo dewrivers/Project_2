@@ -14,10 +14,20 @@ body {
 
 .message {
     text-align: center;
-    font-size: x-large;
+    font-size: 35px;
     font-family: 'Yesteryear', cursive;
     line-height: 40px;
+    color: rgb(255, 253, 253);
+    -webkit-text-stroke: .5px black;
 
+}
+
+.nav-item {
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Yesteryear', cursive;
+    line-height: 40px;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -30,9 +40,18 @@ body {
     background-position:60% 40%; */
 }
 
+.home {
+    background-image: url(/assets/images/barnwood.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:60% 40%;
+}
 .card-text {
     font-family: 'Yesteryear', cursive;
-    font-size: xx-large;
+    font-size: 35px;
+    color: rgb(255, 253, 253);
+    -webkit-text-stroke: .3px black;
 }
 
 .card-title {
@@ -78,4 +97,17 @@ body {
     font-size: 100px;
     font-family: 'Yesteryear', cursive;
     text-shadow: goldenrod;
+}
+
+.addToCart {
+    background-color: rgb(245, 208, 113);
+}
+
+.marketplace {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.register {
+    color: black !important;
 }

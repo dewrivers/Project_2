@@ -1,23 +1,24 @@
 module.exports = function (sequelize, DataTypes) {
-    var Dessert = sequelize.define("Dessert", {
-        Product_name: {
+    var Customer = sequelize.define("Customer", {
+        Whole_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        Price: {
-            type: DataTypes.DECIMAL,
+        email: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        Quantity: {
-            type: DataTypes.INTEGER,
-            defaultValue: 200
-        }
+        Phone_number: {
+            type: DataTypes.STRING,
+
+            allowNull: false,
+        },
     });
-    return Dessert;
+    return Customer;
 };

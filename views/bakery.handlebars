@@ -15,18 +15,26 @@
 <br>
 <br>
 
-<h3 class="header">{{this.dataValues.Category}}</h3>
-
+            <div class= "col-lg-11 text-center">
+            <button class="marketplace btn-info addToCart " href="/marketplace">Market Place</button>
+            </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card-deck">
                     {{#each food}}
                     <div class="card bakery text-center">
-                        <img class="card-img-top" src="/assets/images/bread/{{{this.dataValues.Img_url}}}" alt="Card image cap">
+                        <img class="card-img-top" src="/assets/images/{{escape this.dataValues.Img_url}}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{this.dataValues.Product_name}}</h5>
                             <p class="card-text">Price: ${{this.dataValues.Price}} /each</p>
-                                <a href="#" class="btn btn-info">Add to Cart</a>
+                                <a
+                                    product_name={{this.dataValues.Product_name}} 
+                                    
+                                    class="addToCart btn btn-info"
+                                    product_id={{this.dataValues.id}}
+                                    product_price={{this.dataValues.Price}}>
+                                    Add to Cart
+                                </a>
                         </div>
                     </div>
                     
@@ -34,17 +42,44 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            $(".addToCart").on("click", function() {
+                console.log('name', $(this).attr('product_name'))
+                console.log('id', $(this).attr('product_id'))
+                console.log("price", $(this).attr("product_price"))
+
+                var currentCustomer = JSON.parse(localStorage.getItem('newuser'))
+                console.log('this is current customer',currentCustomer)
+
+                var newCart ={
+                    customerId: currentCustomer.results.id,
+                    foodId: $(this).attr('product_id'),
+                    Product_name: $(this).attr('product_name'),
+                    Cost: $(this).attr('product_price')
+                }
+            $.ajax({
+                url: "/api/addToCart",
+                type: "POST",
+                data: newCart
+            }).then(function (results) {
+
+
+                // take the product_name and product_id and use in ajax call?
+                // take the customers id from local storage and also use in ajax
+                // ajax callo to new addCart route
+            })
+
+            })
+        </script>
+        <script>
+            $('.marketplace').on('click', function() {
+                window.location.href= '/marketplace';
+            })
+        </script>
 <br>
 <br>
 
-
-
-<div class="results">
-
-
-
-
-</div>
 
 
 
