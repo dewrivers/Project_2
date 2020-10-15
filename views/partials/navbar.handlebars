@@ -1,0 +1,23 @@
+{{!-- NAV BAR --}}
+<nav class="navbar navbar-expand-lg navbar-light scrolling-navbar">
+    {{!-- <h1 class="navbar-brand">Le Marché Français</h1> --}}
+    <img class="logo" src="/assets/images/logo.png" width="110px">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="register">Register</a>
+            <a class="nav-item nav-link" href="contact">Contact Us</a>
+            <a id="cart" class="cart nav-item nav-link" href="#">Cart</a>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+
+    $('#cart').on('click', function() {
+        var id = JSON.parse(localStorage.getItem('newuser')).results.id
+        console.log("cart: " + id)
+        window.location = "/cart/"+id
+    })
+</script>
