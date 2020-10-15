@@ -59,8 +59,9 @@ module.exports = function (app) {
 
             for(var i = 0; i < results.length; i ++) {
                 var total = 0;
-                total += 
+                total += Cart.dataValues.Cost
                 console.log("CUSTOMER results", results);
+                
                 console.log("total", total)
             }
         }).catch(function (errr) {

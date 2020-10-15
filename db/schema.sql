@@ -8,7 +8,10 @@ Id INT AUTO_INCREMENT NOT NULL,
 Whole_name varchar (30) NOT NULL,
 Email varchar(30) NOT NULL,
 Phone_number INT NOT NULL,
+<<<<<<< HEAD
+=======
 PASSWORD varchar(20), NOT NULL,
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
 Primary Key(id)
 );
 Alter table customer_order
@@ -36,8 +39,12 @@ Create table Food (
     Category varchar(30) NOT NULL,
     Img_url varchar(30) Null,
 
+<<<<<<< HEAD
+    PRIMARY ID(Key);
+=======
     
     PRIMARY KEY(Id)
+>>>>>>> bad2fddb6111cb6fad0a06f78e353f1148e6fe22
 
 )
 
