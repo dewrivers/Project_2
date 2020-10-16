@@ -27,9 +27,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{this.dataValues.Product_name}}</h5>
                             <p class="card-text">Price: ${{this.dataValues.Price}} /each</p>
-                                <a
-                                    product_name={{this.dataValues.Product_name}} 
-                                    
+                                <a product_name={{this.dataValues.Product_name}} 
                                     class="addToCart btn btn-info"
                                     product_id={{this.dataValues.id}}
                                     product_price={{this.dataValues.Price}}>
@@ -64,11 +62,6 @@
                 data: newCart
             }).then(function (results) {
 
-
-                // take the product_name and product_id and use in ajax call?
-                // take the customers id from local storage and also use in ajax
-                // ajax callo to new addCart route
-                // helllooooo this is just nothinasglkajsdlfkasd
             })
 
             })
