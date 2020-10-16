@@ -27,6 +27,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 /* NAV BAR STYLE */
 .navbar-brand {
     font-size: x-large;
@@ -68,18 +70,19 @@ nav li a:hover {
 
 .message {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: 500;
     font-family: 'Yesteryear', cursive;
-    line-height: 40px;
+    line-height: 60px;
     color: rgb(255, 253, 253);
-    -webkit-text-stroke: .5px black;
+    -webkit-text-stroke: .3px black;
 
 }
 
 .nav-item {
     text-align: center;
     font-size: xx-large;
-    font-family: 'Yesteryear', cursive;
+    font-family: 'Yesteryear', cursive !important;
     line-height: 40px;
     color: rgb(0, 0, 0);
 }
@@ -88,17 +91,20 @@ nav li a:hover {
 
 .card-body {
     background-image: url(/assets/images/barnwood.jpg) !important;
+
+}
+
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position:60% 40%; 
 } */
 
+
 .home {
     background-image: url(/assets/images/barnwood.jpg) !important;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     background-position:60% 40%;
 }
 .card-text {
@@ -389,14 +395,18 @@ h1::before {
     text-align: center;
     font-size: 100px;
     font-family: 'Yesteryear', cursive;
-    text-shadow: goldenrod;
 }
 
 .francais {
     text-align: center;
     font-size: 100px;
     font-family: 'Yesteryear', cursive;
-    text-shadow: goldenrod;
+}
+
+.greeting {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Yesteryear', cursive;
 }
 
 .addToCart {
@@ -411,3 +421,25 @@ h1::before {
 .register {
     color: black !important;
 }
+
+
+.footer {
+    
+    font-size: 30px;
+    font-family: 'Yesteryear', cursive;
+    color: black;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    margin-top: 25px;
+}
+
+.title {
+    font-size: 85px;
+}
+
+#money {
+    font-size: 50px;
+}
+
+
