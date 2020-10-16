@@ -11,11 +11,8 @@ module.exports = function (app) {
         res.render('register')
     });
 
-<<<<<<< HEAD
-    //  GET route for marketplace 
-=======
     //  GET route for marketplace
->>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
+
     app.get("/marketplace", function (req, res) {
         res.render('marketplace')
     });
@@ -64,9 +61,5 @@ module.exports = function (app) {
             console.log('err', errr)
         })
     });
-<<<<<<< HEAD
 };
 
-=======
-};
->>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
