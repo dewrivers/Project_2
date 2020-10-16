@@ -1,8 +1,6 @@
 var db = require("../models");
 
-
 module.exports = function (app) {
-
     // GET route for landing/home page
     app.get("/", function (req, res) {
         res.render('home')
@@ -13,17 +11,21 @@ module.exports = function (app) {
         res.render('register')
     });
 
+<<<<<<< HEAD
     //  GET route for marketplace 
+=======
+    //  GET route for marketplace
+>>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
     app.get("/marketplace", function (req, res) {
         res.render('marketplace')
     });
 
-    //  GET route for contact us 
+    //  GET route for contact us
     app.get("/contact", function (req, res) {
         res.render('contact')
     });
 
-    //  GET route for cart page 
+    //  GET route for cart page
     app.get("/cart", function (req, res) {
         res.render("cart")
     });
@@ -31,7 +33,6 @@ module.exports = function (app) {
     // Get route for food pages
     app.get("/search/:category", function (req, res) {
         console.log("category route is called")
-
         db.Food.findAll({
             where: {
                 category: req.params.category
@@ -46,23 +47,26 @@ module.exports = function (app) {
 
     app.get("/cart/:customerId", function (req, res) {
         console.log("customer ID route is called")
-
         db.Cart.findAll({
             where: {
                 CustomerId: req.params.customerId
             }
         }).then(function (results) {
-            
+
             var total = 0;
             for(var i = 0; i < results.length; i ++) {
                 total += parseInt(results[i].dataValues.Cost)
-                
             }
+            
             var newTotal = total;
             res.render('cart', { products: results, newTotal });
         }).catch(function (errr) {
             console.log('err', errr)
         })
     });
+<<<<<<< HEAD
 };
 
+=======
+};
+>>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2

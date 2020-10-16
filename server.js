@@ -1,14 +1,20 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8008;
+
+
 
 // Requiring models folder for syncing
 const db = require("./models");
 
+
+/*****************************************************************/
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 // Static directory
 app.use(express.static("public"));
@@ -22,10 +28,14 @@ hbs.handlebars.registerHelper('escape', function(variable) {
   return variable.replace(/(['"])/g, '\\$1');
 });
 
+
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+//require("./routes/bakery-routes.js")(app);
+
+
 
 
 // Syncing sequelize models and then starting Express app

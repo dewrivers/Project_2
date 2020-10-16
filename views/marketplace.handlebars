@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Le Marché Français</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Yesteryear&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-
 <body>
-
-<br>
-<br>
 {{!-- First row of CARDS --}}
 
     <div class="container">
@@ -28,6 +22,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Boulangerie</h5>
                             <p class="card-text">Freshly baked breads, daily.</p>
+                            <p class="card-text">Well talk about how dank our bakery is.</p>
+                            <button class="category " name='Bakery'>Bakery</button>
                         </div>
                     </div>
                     <div class="card text-center category" name='cheese'>
@@ -103,9 +99,6 @@
 <br>
 <br>
 <div class="results">
-
-
-
     
 </div>
 
@@ -117,13 +110,15 @@
         var currentCustomer = JSON.parse(localStorage.getItem('newuser'))
         currentName = currentCustomer.results.Whole_name.split(' ');
         firstName = currentName[0];
-        console.log(currentName)
+        console.log(currentName);
 
         $(".greeting").append(firstName);
     </script>
-        <script>$('.contact_us').click(function(){
-        window.location.href='/contact';
-        })</script> 
+    
+        <script>
+        $('.contact_us').click(function(){
+        window.location.href='/contact'});
+        </script> 
 
 </body>
 

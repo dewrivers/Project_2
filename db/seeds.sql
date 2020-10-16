@@ -26,7 +26,7 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Brie
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Camembert", 4.99, 100, "Cheese", "camembert.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Corrtin de Chavignol", 4.99, 100, "Cheese", "corrtindechavignol.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Morbier", 5.99, 100, "Cheese", "morbier.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Fourme d'Ambert", 6.99, 100, "Cheese", "fourmedambert.jpg";
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Fourme d'Ambert", 6.99, 100, "Cheese", "fourmedambert.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Port Salut", 5.99, 100, "Cheese", "portsalut.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Comte", 4.99, 100, "Cheese", "comte.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Neufchatel", 5.99, 100, "Cheese", "neufchatel.jpg");
@@ -43,7 +43,7 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Appl
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Blueberry Pie", 9.99, 100, "Dessert", "blueberrypie.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Tiramisu", 4.99, 100, "Dessert", "tiramisu.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Eclairs", 1.99, 200, "Dessert", "elcairs.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chocolate Mousse", 3.99, 100, "Dessert", , "chocolatemousse.jpg");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chocolate Mousse", 3.99, 100, "Dessert","chocolatemousse.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Souffle", 5.99, 100, "Dessert", "souffle.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Mont Blanc", 4.99, 100, "Dessert", "montblanc.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Lemon Tart", 3.99, 100, "Dessert", "lemontart.jpg");
@@ -70,7 +70,7 @@ insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Bay Scall
 
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Toothpaste", 4.99, 100, "General_Store", "toothpaste.jpeg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Toilet Paper", 5.99, 200, "General_Store", "toiletpaper.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Napkins", 3.99, 100, "General_Store"), 'napkins.jpg';
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Napkins", 3.99, 100, "General_Store", 'napkins.jpg');
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Aluminum Foil", 4.99, 100, "General_Store", "aluminumfoil.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Evian Water Bottle", 4.99, 100, "General_Store", "evianwaterbottle.jpeg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Toothbrush", 3.99, 100, "General_Store", "toothbrush.jpg");
@@ -109,7 +109,7 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Red 
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Green Peppers", .99, 200, "Produce", "greenpepper.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Shallots", .59, 200, "Produce", "shallots.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Garlic", .99, 200, "Produce", "garlic.jpeg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("White Onion", .99, 200, "Produce"), "whiteonion.jpg";
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("White Onion", .99, 200, "Produce", "whiteonion.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Red Onion", .99, 200, "Produce", "redonion.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Red Leaf Lettuce", .99, 200, "Produce", "redleaflettuce.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Romaine Lettuce", .99, 200, "Produce", "romainelettuce.jpg");
@@ -122,38 +122,21 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Pear
 
 -- WINE INSERTS
 
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Cinder Cabernet Sauvignon '10", 14.99, 100, "Wine", "cindercabernet.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Split Rail Cabernet Sauvignon '10", 15.99, 100, "Wine", "splitrail.jpg");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Cinder Cabernet '10", 14.99, 100, "Wine", "cindercabernet.jpg");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Split Rail Cabernet '10", 15.99, 100, "Wine", "splitrail.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Koening Syrah '09", 12.99, 100, "Wine", "koenigsyrah.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Vale Merlot '09", 12.99, 100, "Wine", "valemerlot.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Sawtooth Cabernet Sauvignon '09", 12.99, 100, "Wine", "sawtoothcab.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Torii Mor Pinot Noir '09", 12.99, 100, "Wine", 'torriimorpinot.jpg');
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Sawtooth Cabernet '09", 12.99, 100, "Wine", "sawtoothcab.jpg");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Torii Mor Pinot '09", 12.99, 100, "Wine", 'torriimorpinot.jpg');
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Gran Malbec '13", 16.99, 100, "Wine", "granmalbec.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Hermitage Blanc", 12.99, 100, "Wine", "hermitageblanc.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Condrieu", 13.99, 100, "Wine", "condrieu.jpg");
-insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chassagne Montrachet Blanc", 13.99, 100, "Wine", "chassagne.jpg");
+insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chassagne Montrachet", 13.99, 100, "Wine", "chassagne.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Pauillac", 15.99, 100, "Wine", "pauillac.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("La Grande Rue", 19.99, 100, "Wine", "lagranderue.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chambertin", 18.99, 100, "Wine", "chambertin.jpg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Chambolle Musigny", 20.99, 100, "Wine", "chambollemusigny.jpeg");
 insert into Food (Product_name, Price, Quantity, Category, Img_url) values("La Tache", 17.99, 100, "Wine", "latache.jpg");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
