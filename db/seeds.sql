@@ -52,7 +52,7 @@ insert into Food (Product_name, Price, Quantity, Category, Img_url) values("Maca
 -- FISH INSERTS
 
 insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Bronzino", 12.99, 200, "Fish", "bronzino.jpg");
-insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Salmon", 18.99, 200, "Fish", "salmon.jpg,");
+insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Salmon", 18.99, 200, "Fish", "salmon.jpg");
 insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Fluke", 10.99, 200, "Fish", "fluke.jpeg");
 insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Tilapia", 8.99, 200, "Fish", "tilapia.jpg");
 insert into Food (Product_name, Price, Lbs, Category, Img_url) values("Swordfish", 16.99, 200, "Fish", "swordfish.jpg");

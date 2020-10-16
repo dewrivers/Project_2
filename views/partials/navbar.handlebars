@@ -4,8 +4,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="/">Home</a>
-            <a class="nav-item nav-link" href="register">Register</a>
-            <a class="nav-item nav-link" href="contact">Contact Us</a>
+            <a class="nav-item nav-link" href="/register">Register</a>
+            <a class="nav-item nav-link" href="/contact">Contact Us</a>
             <a id="cart" class="cart nav-item nav-link">Cart</a>
             
         </div>
@@ -17,6 +17,6 @@
     $('#cart').on('click', function() {
         var id = JSON.parse(localStorage.getItem('newuser')).results.id
         console.log("cart: " + id)
-        window.location = "/cart/"+id
+        window.location.href = "/cart/"+id
     })
 </script>

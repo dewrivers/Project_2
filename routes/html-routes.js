@@ -13,7 +13,6 @@ module.exports = function (app) {
         res.render('register')
     });
 
-
     //  GET route for marketplace 
     app.get("/marketplace", function (req, res) {
         res.render('marketplace')
@@ -61,11 +60,9 @@ module.exports = function (app) {
             }
             var newTotal = total;
             res.render('cart', { products: results, newTotal });
-
-
         }).catch(function (errr) {
             console.log('err', errr)
         })
     });
-
 };
+
