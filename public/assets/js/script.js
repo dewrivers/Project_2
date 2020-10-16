@@ -19,5 +19,4 @@ var category = $(this).attr('name');
     });       
     })
 
-
 });
