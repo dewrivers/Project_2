@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* BODY STYLE */
 
 *,
@@ -8,9 +8,6 @@
   padding: 0;
   box-sizing: inherit;
 }
-
-<<<<<<< HEAD
-=======
 
 body {
     background-image: url(/assets/images/frenchyside.jpg);
@@ -20,7 +17,6 @@ body {
     background-position:60% 40%;
 }
 
->>>>>>> e3266f8e68bb5d40a5c2008197e3dee9cbf99c62
 .message {
     text-align: center;
     font-size: 40px;
@@ -29,97 +25,20 @@ body {
     line-height: 60px;
     color: rgb(255, 253, 253);
     -webkit-text-stroke: .3px black;
-=======
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
 }
 
->>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
 
-<<<<<<< HEAD
-body {
-  background-image: url(/assets/images/frenchyside.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position:60% 40%;
-}
-.message {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  font-family: 'Yesteryear', cursive;
-  line-height: 60px;
-  color: rgb(255, 253, 253);
-  -webkit-text-stroke: .3px black;
-=======
 /* BODY STYLE */
 
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
->>>>>>> e3266f8e68bb5d40a5c2008197e3dee9cbf99c62
-}
-<<<<<<< HEAD
-
-
-
 .nav-item {
-    text-align: center;
-    font-size: xx-large;
-    font-family: 'Yesteryear', cursive !important;
-    line-height: 40px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    padding: 5px 8px;
-}
-
-<<<<<<< HEAD
-=======
-.nav-item {
-=======
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-
-body {
-  background-image: url(/assets/images/frenchyside.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position:60% 40%;
-}
-.message {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  font-family: 'Yesteryear', cursive;
-  line-height: 60px;
-  color: rgb(255, 253, 253);
-  -webkit-text-stroke: .3px black;
-}
-/* .nav-item {
->>>>>>> e3266f8e68bb5d40a5c2008197e3dee9cbf99c62
   text-align: center;
   font-size: xx-large;
   font-family: 'Yesteryear', cursive !important;
   line-height: 40px;
   color: rgb(0, 0, 0);
-<<<<<<< HEAD
-}
->>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
-=======
-} */
 
->>>>>>> e3266f8e68bb5d40a5c2008197e3dee9cbf99c62
+}
+
 .card-body {
   background-image: url(/assets/images/barnwood.jpg) !important;
 }
@@ -201,13 +120,3 @@ body {
   font-size: 50px;
 }
 
-
-
-
-
-
-
-/* .container {
-  width: 60rem;
-  margin: 0 auto;
-} */
