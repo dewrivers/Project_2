@@ -53,16 +53,16 @@ module.exports = function (app) {
                 CustomerId: req.params.customerId
             }
         }).then(function (results) {
-            console.log(results)
-            res.render('cart', { products: results });
             
-
+            var total = 0;
             for(var i = 0; i < results.length; i ++) {
-                var total = 0;
-                total += 
-                console.log("CUSTOMER results", results);
-                console.log("total", total)
+                total += parseInt(results[i].dataValues.Cost)
+                
             }
+            var newTotal = total;
+            res.render('cart', { products: results, newTotal });
+
+
         }).catch(function (errr) {
             console.log('err', errr)
         })
