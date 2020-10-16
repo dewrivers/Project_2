@@ -29,7 +29,7 @@ module.exports = function (app) {
     });
 
     // Get route for food pages
-    app.get("/:category", function (req, res) {
+    app.get("/search/:category", function (req, res) {
         console.log("category route is called")
 
         db.Food.findAll({
