@@ -6,7 +6,11 @@
             <a class="nav-item nav-link" href="/">Home</a>
             <a class="nav-item nav-link" href="/register">Register</a>
             <a class="nav-item nav-link" href="/contact">Contact Us</a>
+<<<<<<< HEAD
+            <a id="cart" class="cart nav-item nav-link">Cart</a>
+=======
             <a id="cart" class="cart nav-item nav-link">Cart</a> 
+>>>>>>> 767c659068ebb7aafd8c30b6d3b7910197e047f2
             
         </div>
     </div>
@@ -17,6 +21,6 @@
     $('#cart').on('click', function() {
         var id = JSON.parse(localStorage.getItem('newuser')).results.id
         console.log("cart: " + id)
-        window.location = "/cart/"+id
+        window.location.href = "/cart/"+id
     })
 </script>

@@ -3,16 +3,16 @@ $( document ).ready(function() {
 
 
 
-// Handling the click events for all the different Markets to display prodcuts from the DATABASE
+// marketplace.handlebars on click to get to each different category
 $('.category').on('click', function() {
     console.log('helloooo!!!', $(this).attr('name'))
 // brings us to specific market handlebars page.
 var category = $(this).attr('name');
-    window.location.href= '/' + category;
+    window.location.href= '/search/' + category;
 
 
     $.ajax({
-        url: "/" +  category,
+        url: "/search/" +  category,
         type: "GET",
     }).then(function(results){
         
