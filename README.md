@@ -36,3 +36,10 @@ As a user I like the idea of ​​thinking about having a service that saves me
 
 
 ## Pictures
+![screen_shot_2020-10-13_at_6 11 24_pm](https://user-images.githubusercontent.com/66441544/96294523-7f5bfa00-0fba-11eb-8f23-2917f2043816.png)
+
+![screen_shot_2020-10-13_at_4 51 38_pm](https://user-images.githubusercontent.com/66441544/96294687-c34eff00-0fba-11eb-837b-0d9b4bb475d5.png)
+
+![screen_shot_2020-10-13_at_4 52 07_pm](https://user-images.githubusercontent.com/66441544/96294751-df52a080-0fba-11eb-998c-9a92c80795c6.png)
+
+![screen_shot_2020-10-13_at_4 52 45_pm](https://user-images.githubusercontent.com/66441544/96294841-fa251500-0fba-11eb-93c3-4ec7fb0aafe6.png)
