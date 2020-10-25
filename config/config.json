@@ -1,13 +1,14 @@
 {
     "development": {
         "username": "root",
-        "password": "Gurd253breen!",
+        "password": "Pepper202532",
         "database": "marketplace_db",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
     "production": {
-        "use_env_variable": "JAWSDB_URL",
+        "use_env_variable": "localhost",
         "dialect": "mysql"
     }
+    
 }

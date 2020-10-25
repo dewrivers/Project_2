@@ -14,6 +14,7 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
+
     });
     Cart.associate = function (models) {
         // Associating Customer_order with Cart

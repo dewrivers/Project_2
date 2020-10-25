@@ -3,23 +3,6 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-    // GET route for specific category/market data
-    app.get("search/:category", function (req, res) {
-
-        console.log('we hit the GET route!!')
-        db.Food.findAll({
-            where: {
-                category: req.params.category
-            }
-        }).then(function (results) {
-            res.json(results)
-        }).catch(function(errr) {
-            console.log('err', errr)
-        })
-
-    });
-
-
     // POST route for when a customer starts their order to add to database....posting customer info to CUSTOMERS TABLE
     app.post("/api/customerorder", function (req, res) {
         console.log('we hit the routeee')

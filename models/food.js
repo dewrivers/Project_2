@@ -10,9 +10,6 @@ module.exports = function (sequelize, DataTypes) {
         Price: {
             type: DataTypes.DECIMAL,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
         },
         Quantity: {
             type: DataTypes.INTEGER,
@@ -31,7 +28,9 @@ module.exports = function (sequelize, DataTypes) {
         Img_url: {
             type: DataTypes.STRING,
             allowNull: true
-        },
+        }
+          
+        
 
     });
     return Food;
