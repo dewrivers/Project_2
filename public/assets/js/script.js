@@ -8,7 +8,7 @@ $('.category').on('click', function() {
     console.log('helloooo!!!', $(this).attr('name'))
 // brings us to specific market handlebars page.
 var category = $(this).attr('name');
-    window.location.href= '/search/' + category;
+    window.location.href= '/search/page/' + category;
 
 
     $.ajax({

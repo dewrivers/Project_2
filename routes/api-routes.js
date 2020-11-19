@@ -1,10 +1,9 @@
 var db = require("../models");
 
-
 module.exports = function (app) {
 
     // GET route for specific category/market data
-    app.get("search/:category", function (req, res) {
+    app.get("/search/:category", function (req, res) {
 
         console.log('we hit the GET route!!')
         db.Food.findAll({
@@ -37,7 +36,7 @@ module.exports = function (app) {
 
 // POST for adding cart info to database...posting cart info to CART TABLE
     app.post("/api/addtocart", function (req, res) {
-        console.log("post happening", req.body)
+        console.log("post ADD TO CART happening", req.body)
 
         db.Cart.create({
             Product_name: req.body.Product_name,
@@ -56,6 +55,22 @@ module.exports = function (app) {
         db.Food.findAll({
             where: {
                 CustomerId: req.params.CustomerId
+            }
+        }).then(function (results) {
+            res.json(results)
+        }).catch(function(errr) {
+            console.log('err', errr)
+        })
+
+    });
+
+    app.delete("/cart/:Customerid/:foodId", function (req, res) {
+
+        console.log('we hit the DELETE route!!', req.params)
+        ;
+        db.Cart.destroy({
+            where: {
+                FoodId: req.params.foodId
             }
         }).then(function (results) {
             res.json(results)

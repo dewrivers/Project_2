@@ -28,14 +28,13 @@ module.exports = function (app) {
     });
 
     // Get route for food pages
-    app.get("/search/:category", function (req, res) {
+    app.get("/search/page/:category", function (req, res) {
         console.log("category route is called")
         db.Food.findAll({
             where: {
                 category: req.params.category
             }
         }).then(function (results) {
-            console.log(results)
             res.render('bakery', { food: results });
         }).catch(function (errr) {
             console.log('err', errr)
@@ -57,6 +56,22 @@ module.exports = function (app) {
             
             var newTotal = total;
             res.render('cart', { products: results, newTotal });
+        }).catch(function (errr) {
+            console.log('err', errr)
+        })
+    });
+
+
+    app.delete("/cart/customerId/:foodId", function (req, res) {
+        console.log("HTML DELETE route is called", req.params.FoodId )
+        db.Cart.destroy({
+            where: {
+                
+                foodId: req.params.foodId
+            }
+        }).then(function (results) {
+            console.log(results)
+            res.render('cart', { products: results});
         }).catch(function (errr) {
             console.log('err', errr)
         })

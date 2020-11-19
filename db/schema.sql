@@ -22,8 +22,8 @@ Product_name varchar(30) NOT NULL,
 Cost DEC(10, 4) NOT NULL,
 Primary Key(id)
 );
-Add Foreign Key (CustomerId) references Customer(id);
-Add Foreign Key (FoodId) references Food(id);
+ Foreign Key (CustomerId) references Customer(id);
+ Foreign Key (FoodId) references Food(id);
 
 
 Create table Food (

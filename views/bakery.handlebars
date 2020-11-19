@@ -16,7 +16,7 @@
 <br>
 
             <div class= "col-lg-11 text-center">
-            <button class="marketplace btn-info addToCart " href="/marketplace">Market Place</button>
+            <button class="marketplace btn-info">Market Place</button>
             </div>
         <div class="row">
             <div class="col-lg-12">
@@ -27,7 +27,8 @@
                         <div class="card-body">
                             <h5 class="card-title">{{this.dataValues.Product_name}}</h5>
                             <p class="card-text">Price: ${{this.dataValues.Price}} /each</p>
-                                <a product_name={{this.dataValues.Product_name}} 
+                                <a 
+                                    product_name="{{this.dataValues.Product_name}}"
                                     class="addToCart btn btn-info"
                                     product_id={{this.dataValues.id}}
                                     product_price={{this.dataValues.Price}}>

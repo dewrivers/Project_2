@@ -12,65 +12,96 @@
 </head>
 
 <body>
-<br>
-<br>
-<h3 class="header">'s Shopping Cart</h3>
-        {{!-- Card for all products chosen by customer --}}
-        <div class="row">
+    <br>
+    <br>
+    <h3 class="header">'s Shopping Cart</h3>
+    {{!-- Card for all products chosen by customer --}}
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="card-deck justify-content-lg-center">
+                <div class="card text-center">
                     {{#each products}}
-            <div class="col-lg-12">
-                <div class="card-deck justify-content-lg-center">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            
-                            <div class="card-title">{{this.dataValues.Product_name}}</div>
-                            <div class="card-text">Price: ${{this.dataValues.Cost}} /each</div>
-                            <button class="delete">Delete</button>
-                        </div>
+                    <div class="card-body">
+
+                        <div class="card-title">{{this.dataValues.Product_name}}</div>
+                        <div class="card-text">Price: ${{this.dataValues.Cost}} /each</div>
+                        <a product_name={{this.dataValues.Product_name}} class="delete btn btn-info"
+                            product_id={{this.dataValues.FoodId}} product_price={{this.dataValues.Price}}>
+                            Delete
+                        </a>
                     </div>
                     {{/each}}
                 </div>
+
             </div>
         </div>
-        {{!-- Card for Total --}}
-        <br>
-        <br>
-        <br>
-                    
+    </div>
+    {{!-- Card for Total --}}
+    <br>
+    <br>
+    <br>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                    <div class="card bakery text-center">
-                        <div class="card-body">
-                            <div class="card-title title">Total</div>
-                            <div class="card-text total">Your total is <h1 id="money">${{newTotal}}.</h1>
-                                <p>Please pay when you come and pick your order up! Thank you!</p></div>
+                <div class="card bakery text-center">
+                    <div class="card-body">
+                        <div class="card-title title">Total</div>
+                        <div class="card-text total">Your total is <h1 id="money">${{newTotal}}.</h1>
+                            <p>Please pay when you come and pick your order up! Thank you!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     <br>
     <br>
     <br>
     <br>
-<script>
+    <script>
         var currentCustomer = JSON.parse(localStorage.getItem('newuser'))
-                console.log('this is current customer id', currentCustomer.results.id)
+        console.log('this is current customer id', currentCustomer.results.id)
 
-                currentName = currentCustomer.results.Whole_name
-                $(".header").prepend(currentName)
-                
-    //ajax call to go get all the carts where id = localstarage custmer id from database
-    // in the .then() of the ajax call loop and put each thing on the page
-    $.ajax({
-        url: "/cart" + "/" + currentCustomer.results.id,
-        type: "GET",
-    }).then(function() {
-        console.log("im in the .then",)
-        
-    })
-</script>
+        currentName = currentCustomer.results.Whole_name
+        $(".header").prepend(currentName)
+
+        //ajax call to go get all the carts where id = localstarage custmer id from database
+        // in the .then() of the ajax call loop and put each thing on the page
+        $.ajax({
+            url: "/cart/" + currentCustomer.results.id,
+            type: "GET",
+        }).then(function () {
+            console.log("im in the .then",)
+
+        })
+    </script>
+    <script>
+        $(".delete").on("click", function () {
+            console.log('name', $(this).attr('product_name'))
+            console.log("price", $(this).attr("product_price"))
+            console.log("id", $(this).attr('product_id'))
+
+            var updatedCart = {
+                foodId: $(this).attr('product_id'),
+                Product_name: $(this).attr('product_name'),
+                Cost: $(this).attr('product_price')
+            }
+
+            var foodId = $(this).attr('product_id')
+
+            $.ajax({
+                url: "/cart" + "/" + currentCustomer.results.id + "/" + foodId,
+                method: "DELETE",
+                data: updatedCart
+            }).then(function (results) {
+
+                window.location.reload()
+            })
+        })
+    </script>
 
 </body>
+
 </html>

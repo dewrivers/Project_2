@@ -99,18 +99,20 @@ body {
 .marketplace {
   margin-left: 50%;
   margin-right: 50%;
+  background-color: rgb(245, 208, 113)
 }
 .register {
   color: black !important;
 }
 .footer {
-  font-size: 30px;
+  font-size: 35px;
   font-family: 'Yesteryear', cursive;
-  color: black;
+  color: white;
   left: 0 !important;
   bottom: 0 !important;
   width: 100% !important;
-  margin-top: 25px;
+  margin-top: 15px;
+  position: sticky;
 }
 .title {
   font-size: 85px;
@@ -120,3 +122,10 @@ body {
   font-size: 50px;
 }
 
+.delete {
+  background-color: rgb(245, 208, 113)
+}
+
+.form-control{
+ width: 95%;
+}
