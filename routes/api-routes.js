@@ -2,8 +2,7 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-<<<<<<< HEAD
-    // GET route for specific category/market data
+
     app.get("/search/:category", function (req, res) {
 
         console.log('we hit the GET route!!')
@@ -20,8 +19,7 @@ module.exports = function (app) {
     });
 
 
-=======
->>>>>>> 41e421f604ebbb4662921509b21ec025d903b149
+
     // POST route for when a customer starts their order to add to database....posting customer info to CUSTOMERS TABLE
     app.post("/api/customerorder", function (req, res) {
         console.log('we hit the routeee')
