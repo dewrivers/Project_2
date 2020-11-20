@@ -11,8 +11,6 @@ Email varchar(30) NOT NULL,
 Phone_number INT NOT NULL,
 Primary Key(id)
 );
-
-
 -- This will be the specific items that the customer is purchasing referenced by the Category(market) that they ordered from
 Create table Cart (
 Id INT AUTO_INCREMENT NOT NULL,
@@ -22,8 +20,10 @@ Product_name varchar(30) NOT NULL,
 Cost DEC(10, 4) NOT NULL,
 Primary Key(id)
 );
+
  Foreign Key (CustomerId) references Customer(id);
  Foreign Key (FoodId) references Food(id);
+
 
 
 Create table Food (
@@ -36,4 +36,5 @@ Create table Food (
     Img_url varchar(30) Null,
     PRIMARY KEY(Id)
 )
+
 
