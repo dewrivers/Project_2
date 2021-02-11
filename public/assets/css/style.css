@@ -242,6 +242,21 @@ h1{
     }
 }
 
+@media (min-width: 800px) {
+  .marketplace{
+    left: 47%;
+  }
+  .card-title{
+    font-size: 24px;
+  }
+  .card-text{
+    font-size: 15px;
+  }
+  .message{
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
 
 
 
