@@ -8,6 +8,7 @@ module.exports = function (app) {
 
     // GET route for register page
     app.get("/register", function (req, res) {
+        console.log(req)
         res.render('register')
     });
 
@@ -29,7 +30,6 @@ module.exports = function (app) {
 
     // Get route for food pages
     app.get("/search/page/:category", function (req, res) {
-        console.log("category route is called")
         db.Food.findAll({
             where: {
                 category: req.params.category
@@ -42,7 +42,6 @@ module.exports = function (app) {
     });
 
     app.get("/cart/:customerId", function (req, res) {
-        console.log("customer ID route is called")
         db.Cart.findAll({
             where: {
                 CustomerId: req.params.customerId
@@ -61,9 +60,7 @@ module.exports = function (app) {
         })
     });
 
-
     app.delete("/cart/customerId/:foodId", function (req, res) {
-        console.log("HTML DELETE route is called", req.params.FoodId )
         db.Cart.destroy({
             where: {
                 

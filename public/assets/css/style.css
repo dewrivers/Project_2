@@ -1,12 +1,8 @@
 
 /* BODY STYLE */
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,28 +15,43 @@ body {
 
 .message {
     text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Yesteryear', cursive;
-    line-height: 60px;
-    color: rgb(255, 253, 253);
-    -webkit-text-stroke: .3px black;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Bodoni Moda', serif;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color:white;
+    
 }
 
 
-/* BODY STYLE */
-
-.nav-item {
+.nav-link {
   text-align: center;
-  font-size: xx-large;
-  font-family: 'Yesteryear', cursive !important;
-  line-height: 40px;
+  font-size: 20px;
+  font-family: 'Bodoni Moda', serif;
   color: rgb(0, 0, 0);
-
+  transition: 0.3s ease;
+  text-decoration: none;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  margin: 0 20px;
 }
+.nav-item:hover{
+  border-top: 4px solid rgb(245, 208, 113);
+  border-bottom: 4px solid rgb(245, 208, 113);
+  transition: 0.3s ease;
+}
+
+a:hover {   
+  color: rgb(0, 0, 0) !important;
+}
+
 
 .card-body {
   background-image: url(/assets/images/barnwood.jpg) !important;
+}
+.card-deck{
+  margin: 2%;
 }
 .home {
   background-image: url(/assets/images/barnwood.jpg) !important;
@@ -49,70 +60,82 @@ body {
   background-position:60% 40%;
 }
 .card-text {
-  font-family: 'Yesteryear', cursive;
-  font-size: 35px;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 24px;
   color: rgb(255, 253, 253);
-  -webkit-text-stroke: .3px black;
 }
 .card-title {
-  font-family: 'Niconne', cursive;
-  font-size: 45px;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
   color: rgb(234, 202, 139);
 }
 .card-img-top {
   width: 100%;
   height:150px;
   border-bottom: groove goldenrod;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 0;
 }
 .card {
-  border-radius: 15px;
   border: groove goldenrod;
 }
+
 .bakery {
   min-width: 200px;
   margin: 15px;
 }
-.card:hover{
-  transition: .2s;
-  transform: scale(1.05);
-}
+
 .header {
   text-align: center;
-  font-size: 100px;
-  font-family: 'Yesteryear', cursive;
+  font-size: 40px;
+  font-family: 'Bodoni Moda', serif;
 }
 .francais {
   text-align: center;
-  font-size: 100px;
-  font-family: 'Yesteryear', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Bodoni Moda', serif;
 }
 .greeting {
   text-align: center;
-  font-size: 70px;
-  font-family: 'Yesteryear', cursive;
+  font-size: 40px;
+  font-family: 'Bodoni Moda', serif;
 }
 .addToCart {
   background-color: rgb(245, 208, 113);
 }
+.addToCart:hover {
+  color: rgb(245, 208, 113) !important;
+  background-color: black;
+}
 .marketplace {
-  margin-left: 50%;
-  margin-right: 50%;
-  background-color: rgb(245, 208, 113)
+  font-size: 17px;
+  font-family: 'Bodoni Moda', serif;
+  background-color: rgb(245, 208, 113);
+  position:absolute;
+    right: 38%;
+    bottom: 30%;
+}
+.marketplace:hover{
+  background-color: black;
+  color: rgb(245, 208, 113)
 }
 .register {
   color: black !important;
+  margin:auto;
+  background-color: transparent;
 }
+.category:hover{
+  transform: translate3D(0,-1px,0) scale(1.03);
+  transition: .2s;
+}
+
 .footer {
-  font-size: 35px;
-  font-family: 'Yesteryear', cursive;
-  color: white;
-  left: 0 !important;
-  bottom: 0 !important;
-  width: 100% !important;
-  margin-top: 15px;
-  position: sticky;
+  font-size: 30px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: bold;
+  color: black;
+  
+
 }
 .title {
   font-size: 85px;
@@ -127,6 +150,68 @@ body {
 }
 
 .form-control{
-width: 95%;
+width: 90%;
+align-items: center;
 }
+.labelName {
+text-align: center;
+}
+
+.navbar-toggler {
+  margin-top: 0px;
+  border-radius: 0;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.navbar-toggler:active .plus {
+  transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg); 
+  -ms-transform: rotate(45deg);
+  outline: none ;
+  box-shadow: none;
+  }
+
+  @media (max-width: 575px) {
+    .card{
+      width: 50%;
+    }
+    .card-deck{
+      align-items: center;
+    }
+    .card-title{
+      font-size: 20px;
+    }
+    .card-text{
+      font-size: 17px;
+    }
+    .cardCategory{
+      margin-top:auto;
+    }
+}
+
+
+.fa {
+  font-family: 'Bodoni Moda', serif;
+  background-color: rgb(245, 208, 113);
+  float: right;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  color: black;
+  font-size: 55px;
+  border-radius: 0;
+  border: 2px black solid;
+  padding: 0px 8px 0px 8px;
+}
+
+.fa:hover {
+  background-color: black;
+  color: rgb(245, 208, 113);
+}
+
 

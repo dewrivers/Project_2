@@ -1,15 +1,21 @@
 {{!-- NAV BAR --}}
-<nav class="navbar navbar-expand-md navbar-light scrolling-navbar">
-    <img class="logo" src="/assets/images/logo.png" width="110px">
-    <div id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/">Home</a>
-            <a class="nav-item nav-link" href="/register">Register</a>
-            <a class="nav-item nav-link" href="/contact">Contact Us</a>
-            <a id="cart" class="cart nav-item nav-link">Cart</a>
+<nav class="navbar navbar-expand-lg ">
+    <img class="logo" src="/assets/images/logo.png" width="80px"></img>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img class="plus" src='../../assets/images/plus.svg' alt="plus sign" aria-hidden="true"></img></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto">
+                    <li><a class="nav-link nav-item"  data-target=".navbar-collapse.show" href="/">HOME</a></li>
+                    <li><a class="nav-link nav-item"  data-target=".navbar-collapse.show" href="/register">REGISTER</a></li>
+                    <li><a class="nav-link nav-item"  data-target=".navbar-collapse.show" href="/contact">CONTACT US</a></li>
+                    <li><a class="nav-link nav-item"  data-target=".navbar-collapse.show" id="cart">CART</a></li>
+            </ul>
         </div>
-    </div>
 </nav>
+
 
 <script>
     // Takes current user id from local storage and adds it to the cart path to show the products that user added to cart.

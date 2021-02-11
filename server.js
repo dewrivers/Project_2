@@ -2,7 +2,8 @@ const compression = require('compression')
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-const PORT = process.env.PORT || 8008;
+const PORT = process.env.PORT || 8000;
+
 
 
 // Requiring models folder for syncing

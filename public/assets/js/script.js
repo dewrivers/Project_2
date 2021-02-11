@@ -1,7 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
-
-
 
 // marketplace.handlebars on click to get to each different category
 $('.category').on('click', function() {
