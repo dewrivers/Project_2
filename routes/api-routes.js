@@ -66,7 +66,6 @@ module.exports = function (app) {
     });
 
     app.delete("/cart/:Customerid/:foodId", function (req, res) {
-
         console.log('we hit the DELETE route!!', req.params)
         ;
         db.Cart.destroy({

@@ -175,43 +175,74 @@ text-align: center;
   box-shadow: none;
   }
 
-  @media (max-width: 575px) {
-    .card{
-      width: 50%;
-    }
+  .fa {
+    font-family: 'Bodoni Moda', serif;
+    background-color: rgb(245, 208, 113);
+    float: right;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99;
+    color: black;
+    font-size: 55px;
+    border-radius: 0;
+    border: 2px black solid;
+    padding: 0px 8px 0px 8px;
+  }
+  
+  .fa:hover {
+    background-color: black;
+    color: rgb(245, 208, 113);
+  }
+
+  @media (min-width: 320px) {
+
+h1{
+  font-size: 15px;
+}
+  .message{
+    font-size: 10px;
+    width: 100%;
+    line-height: 20px;
+  }
+
+  .marketplace{
+    left: 22%;
+  }
+
+  .greeting{
+    font-size: 25px;
+  }
+  .footer {
+    font-size: 15px;
+  }
+  .fa{
+    font-size: 35px;
+    bottom: 50px;
+    right: 20px;
+
+  }
+  }
+
+  @media (min-width: 768px) {
     .card-deck{
       align-items: center;
     }
     .card-title{
-      font-size: 20px;
+      font-size: 13px;
     }
     .card-text{
-      font-size: 17px;
+      font-size: 10px;
     }
     .cardCategory{
-      margin-top:auto;
+      margin: 10px;;
+    }
+    .marketplace{
+      left: 38%;
     }
 }
 
 
-.fa {
-  font-family: 'Bodoni Moda', serif;
-  background-color: rgb(245, 208, 113);
-  float: right;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 99;
-  color: black;
-  font-size: 55px;
-  border-radius: 0;
-  border: 2px black solid;
-  padding: 0px 8px 0px 8px;
-}
 
-.fa:hover {
-  background-color: black;
-  color: rgb(245, 208, 113);
-}
 
 
